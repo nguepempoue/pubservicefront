@@ -1,0 +1,48 @@
+<div class="content-wrapper">
+  <div class="row">
+    <div class="col-md-6 col-md-7 col-lg-5 mx-auto grid-margin stretch-card">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">Register</h4>
+          <p class="card-description">
+            Please inter your informations
+          </p>
+          <form class="forms-sample" [formGroup]="registerForm" (ngSubmit)="registerProvider()">
+            <div class="form-group">
+              <label for="exampleInputUsername1">FirstName</label>
+              <input type="text" class="form-control" formControlName="firstName" id="exampleInputUsername1" placeholder="FisrName">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputUsername1">LastName</label>
+              <input type="text" class="form-control" formControlName="lastName" id="exampleInputUsername1" placeholder="LastName">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputUsername1">Phone Number</label>
+              <input type="text" class="form-control" formControlName="phoneNumber" id="exampleInputUsername1" placeholder="Phone Number">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="email" class="form-control" formControlName="email" id="exampleInputEmail1" placeholder="Email">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" class="form-control" formControlName="password" id="exampleInputPassword1" placeholder="Password">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputConfirmPassword1">Confirm Password</label>
+              <input type="password" class="form-control" formControlName="cfpassword" id="exampleInputConfirmPassword1" placeholder="Password">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputConfirmPassword1">Seclect Sector</label>
+              <select class="form-control" formControlName="idSector">
+                <option *ngFor="let sector of sectors" [value] = "sector.idSector">{{ sector.name }}</option>
+              </select>
+
+            </div>
+            <button type="submit" class="btn btn-primary mr-2">Register</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

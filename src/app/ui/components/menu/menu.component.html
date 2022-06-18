@@ -1,0 +1,23 @@
+<nav class="sidebar sidebar-offcanvas" id="sidebar">
+  <ul class="nav">
+    <li class="nav-item" [routerLinkActive]="['active']">
+      <a class="nav-link"  [routerLink]="['/dashboard/']">
+        <i class="icon-grid menu-icon"></i>
+        <span class="menu-title">Dashboard</span>
+      </a>
+    </li>
+    <li class="nav-item" [routerLinkActive]="['active']">
+      <a class="nav-link"[routerLink]="['/providers/']" data-toggle="collapse" aria-expanded="false" aria-controls="auth">
+        <i class="icon-head menu-icon"></i>
+        <span class="menu-title">Providers</span>
+      </a>
+    </li>
+
+    <li class="nav-item" [routerLinkActive]="['active']">
+      <a class="nav-link" [routerLink]="['/sectors/']">
+        <i class="icon-layout menu-icon"></i>
+        <span class="menu-title">Sectors</span>
+      </a>
+    </li>
+  </ul>
+</nav>

@@ -1,0 +1,8 @@
+.mycard{
+  background-color:rgba(230, 227, 227, 0.925);
+  text-align: center;
+  margin-top: 200px;
+}
+.pointer{
+  cursor: pointer;
+}

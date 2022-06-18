@@ -1,0 +1,15 @@
+.button{
+  background-color: #4B49AC !important;
+  color: white;
+  float: right;
+  margin-left: -110px;
+}
+
+.header{
+  margin-bottom: 70px;
+}
+.buttun-size{
+  width: 100px;
+  height: 5px;
+  padding-bottom: 25px;
+}

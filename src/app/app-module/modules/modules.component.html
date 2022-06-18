@@ -1,0 +1,24 @@
+<div>
+  <div class="container-scroller">
+    <!-- partial:partials/_navbar.html -->
+    <app-header></app-header>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+      <app-menu></app-menu>
+      <!-- partial -->
+      <div class="main-panel">
+
+        <router-outlet></router-outlet>
+
+        <!-- content-wrapper ends -->
+        <!-- partial:partials/_footer.html -->
+        <app-footer></app-footer>
+        <!-- partial -->
+      </div>
+      <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+</div>
+
