@@ -17,16 +17,18 @@ export class ProviderDetailsComponent implements OnInit {
    }
 
   ngOnInit(): void {
+    this.getProvider()
   }
 
   getProvider(){
     this.activatedRoute.queryParams.subscribe((params) => {
       this.userSerive.getById(params['id']).subscribe((provider)=>{
         this.provider = provider;
+        console.log(this.provider)
       }, ((error)=>{
         console.log(error);
       }))
-    
+
     })
   }
 

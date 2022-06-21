@@ -71,7 +71,9 @@ export class LoginComponent implements OnInit {
         var jwtToken = result.headers.get('Authorization');
         console.log(jwtToken);
         this.suputilityservice.saveToken(jwtToken);
-         this.router.navigateByUrl("dashboard");
+
+        this.router.navigateByUrl("dashboard");
+
 
       }, ((error)=>{
         if (error.status == 403) {
@@ -79,5 +81,17 @@ export class LoginComponent implements OnInit {
         }
       }))
   }
+
+  // getUserByEmail(email: string){
+  //   this.userService.getByEmail(email).subscribe((user)=>{
+  //     if(user.role.name =="Role_ADMIN"){
+  //       this.router.navigateByUrl("dashboard");
+  //     }else if(user.role.name =="Role_SUPERVISOR"){
+  //       this.router.navigateByUrl(
+  //         `provider-deatils?id=${user.idUser}`
+  //       );
+  //     }
+  //   })
+  // }
 
 }

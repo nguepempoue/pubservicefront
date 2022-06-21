@@ -19,12 +19,7 @@ export class UserService {
     this.headers = new HttpHeaders({'content-type':'application/json', 'Authorization': supUtilityService.loadToken()});
   }
 
-  getAllUsers(): Observable<User[]> {
-    return this.httpClient.get<User[]>(this.baseUrl + "/user/all", { 'headers': this.headers});
-  }
-  saveProvider(provider: ProviderBean): Observable<User> {
-    return this.httpClient.post<User>(this.baseUrl + "/user/register", provider, { 'headers': this.headers});
-  }
+
   getById(idUser: number): Observable<User>{
     return this.httpClient.get<User>(this.baseUrl+'/user/id?id=' + idUser, { 'headers': this.headers});
   }
@@ -33,5 +28,11 @@ export class UserService {
   }
   confirmToken(token: string): Observable<User>{
     return this.httpClient.get<User>(this.baseUrl+"/user/confirmToken?activated=" + token, { 'headers': this.headers});
+  }
+  getAllUsers(): Observable<User[]> {
+    return this.httpClient.get<User[]>(this.baseUrl + "/user/all", { 'headers': this.headers});
+  }
+  saveProvider(provider: ProviderBean): Observable<User> {
+    return this.httpClient.post<User>(this.baseUrl + "/user/register", provider);
   }
 }
